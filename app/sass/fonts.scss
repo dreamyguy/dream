@@ -1,6 +1,8 @@
 // this is compiled to a dedicated file because Firefox 20+ has a bug that doesn't render web fonts properly
 // requires 'src/js/webfont-loader.js'
 
+@import "variables";
+
 @font-face {
   font-family: 'DobraMedium';
   src: url("#{$path-fonts}/dobra-medium-DobraMedium.eot");
