@@ -8,7 +8,7 @@ module.exports = {
     },
 
     sass: {
-        files: 'app/sass/**/*.scss',
+        files: ['app/sass/**/*.scss'],
         tasks: ['compass:dev']
     },
 
