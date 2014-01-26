@@ -184,3 +184,206 @@ section {
 /* --------------------------------------------
 ::::::: responsive style ::::::::::::::::::::::
 ----------------------------------------------- */
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.visible-regular {
+  display: block;
+}
+
+.hidden-regular {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .visible-palm {
+    display: block;
+  }
+
+  .visible-lap {
+    display: none;
+  }
+
+  .visible-portable {
+    display: block;
+  }
+
+  .visible-desk {
+    display: none;
+  }
+
+  .hidden-palm {
+    display: none;
+  }
+
+  .hidden-lap {
+    display: block;
+  }
+
+  .hidden-portable {
+    display: none;
+  }
+
+  .hidden-desk {
+    display: block;
+  }
+}
+@media (min-width: 481px) and (max-width: 1023px) {
+  .visible-palm {
+    display: none;
+  }
+
+  .visible-lap {
+    display: block;
+  }
+
+  .visible-portable {
+    display: block;
+  }
+
+  .visible-desk {
+    display: block;
+  }
+
+  .hidden-palm {
+    display: block;
+  }
+
+  .hidden-lap {
+    display: none;
+  }
+
+  .hidden-portable {
+    display: none;
+  }
+
+  .hidden-desk {
+    display: none;
+  }
+}
+@media (max-width: 1023px) {
+  .visible-palm {
+    display: block;
+  }
+
+  .visible-lap {
+    display: block;
+  }
+
+  .visible-portable {
+    display: block;
+  }
+
+  .visible-desk {
+    display: none;
+  }
+
+  .hidden-palm {
+    display: none;
+  }
+
+  .hidden-lap {
+    display: none;
+  }
+
+  .hidden-portable {
+    display: none;
+  }
+
+  .hidden-desk {
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  .visible-palm {
+    display: none;
+  }
+
+  .visible-lap {
+    display: none;
+  }
+
+  .visible-portable {
+    display: none;
+  }
+
+  .visible-desk {
+    display: block;
+  }
+
+  .hidden-palm {
+    display: block;
+  }
+
+  .hidden-lap {
+    display: block;
+  }
+
+  .hidden-portable {
+    display: block;
+  }
+
+  .hidden-desk {
+    display: none;
+  }
+}
+.visible-phone {
+  display: none;
+}
+
+.visible-tablet {
+  display: none;
+}
+
+.visible-desktop {
+  display: block;
+}
+
+.hidden-phone {
+  display: block;
+}
+
+.hidden-tablet {
+  display: block;
+}
+
+.hidden-desktop {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .visible-phone {
+    display: block;
+  }
+
+  .hidden-phone {
+    display: none;
+  }
+
+  .hidden-desktop {
+    display: block;
+  }
+
+  .visible-desktop {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .visible-tablet {
+    display: block;
+  }
+
+  .hidden-tablet {
+    display: none;
+  }
+
+  .hidden-desktop {
+    display: block;
+  }
+
+  .visible-desktop {
+    display: none;
+  }
+}

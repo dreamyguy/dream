@@ -1,0 +1,94 @@
+// responsive classes
+
+$yep: block;
+$nope: none;
+
+// Hide from screenreaders and browsers
+.hidden { display: $nope; visibility: hidden; }
+
+// Make elements visible or not depending on viewport width.
+// Warning: be *very careful* when using **.visible-portable** or **.hidden-portable**,
+//   as they can be confusing.
+
+//// alternative 1: focus on css-wizardry's resolutions
+
+// palm - palm-based devices, like phones and small tablets
+// lap - lap-based devices, like iPads or laptops
+// portable - all of the above
+// desk - stationary devices, like desktop computers
+// regular - any/all types of device
+
+// regular (syntax sugar)
+.visible-regular { display: $yep; }
+.hidden-regular { display: $nope; }
+
+// palm
+@media (max-width: 480px) {
+    .visible-palm { display: $yep; }
+    .visible-lap { display: $nope; }
+    .visible-portable { display: $yep; }
+    .visible-desk { display: $nope; }
+    .hidden-palm { display: $nope; }
+    .hidden-lap { display: $yep; }
+    .hidden-portable { display: $nope; }
+    .hidden-desk { display: $yep; }
+}
+// lap
+@media (min-width: 481px) and (max-width: 1023px) {
+    .visible-palm { display: $nope; }
+    .visible-lap { display: $yep; }
+    .visible-portable { display: $yep; }
+    .visible-desk { display: $yep; }
+    .hidden-palm { display: $yep; }
+    .hidden-lap { display: $nope; }
+    .hidden-portable { display: $nope; }
+    .hidden-desk { display: $nope; }
+}
+// portable
+@media (max-width: 1023px) {
+    .visible-palm { display: $yep; }
+    .visible-lap { display: $yep; }
+    .visible-portable { display: $yep; }
+    .visible-desk { display: $nope; }
+    .hidden-palm { display: $nope; }
+    .hidden-lap { display: $nope; }
+    .hidden-portable { display: $nope; }
+    .hidden-desk { display: $yep; }
+}
+// desk
+@media (min-width: 1024px) {
+    .visible-palm { display: $nope; }
+    .visible-lap { display: $nope; }
+    .visible-portable { display: $nope; }
+    .visible-desk { display: $yep; }
+    .hidden-palm { display: $yep; }
+    .hidden-lap { display: $yep; }
+    .hidden-portable { display: $yep; }
+    .hidden-desk { display: $nope; }
+}
+
+//// alternative 2: focus on only 3 kind of devices
+
+// desktops
+.visible-phone { display: $nope; }
+.visible-tablet { display: $nope; }
+.visible-desktop { display: $yep; }
+.hidden-phone { display: $yep; }
+.hidden-tablet { display: $yep; }
+.hidden-desktop { display: $nope; }
+
+// phones
+@media (max-width: 767px) {
+    .visible-phone { display: $yep; }
+    .hidden-phone { display: $nope; }
+    .hidden-desktop { display: $yep; }
+    .visible-desktop { display: $nope; }
+}
+
+// tablets & small desktops only
+@media (min-width: 768px) and (max-width: 979px) {
+    .visible-tablet { display: $yep; }
+    .hidden-tablet { display: $nope; }
+    .hidden-desktop { display: $yep; }
+    .visible-desktop { display: $nope; }
+}
