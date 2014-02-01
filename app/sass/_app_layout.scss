@@ -5,3 +5,24 @@ section {
     @media (max-width: 767px) { padding: 10%; }
     @media (max-width: 480px) { padding: 5%; }
 }
+
+.rounded {
+    border-radius: 100%;
+}
+
+.events {
+    margin: 0 -5px;
+}
+.events__item {
+    width: 160px;
+    margin: 0 5px;
+    text-align: center;
+    display: inline-block;
+}
+.events__item--supporter {
+    height: 160px;
+    width: 160px;
+}
+.events__item--name {}
+.events__item--date {}
+.events__item--description {}
