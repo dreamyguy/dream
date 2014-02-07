@@ -6,6 +6,12 @@ section {
     @media (max-width: 480px) { padding: 5%; }
 }
 
+.heading-two {
+    margin-bottom: 10px;
+    font-size: 24px;
+    @media (max-width: 767px) { font-size: 20px; }
+}
+
 .rounded {
     border-radius: 100%;
 }
