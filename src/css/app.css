@@ -387,12 +387,12 @@ section {
 }
 @media (max-width: 767px) {
   section {
-    padding: 10%;
+    padding: 4%;
   }
 }
 @media (max-width: 480px) {
   section {
-    padding: 5%;
+    padding: 3%;
   }
 }
 
