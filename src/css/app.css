@@ -1,3 +1,4 @@
+@charset "utf-8";
 /* --------------------------------------------
 ::::::: resets and fixes ::::::::::::::::::::::
 ----------------------------------------------- */
@@ -382,6 +383,18 @@ abbr, acronym {
   color: #111111 !important;
 }
 
+header {
+  padding: 0 15px;
+  height: 40px;
+  background: #212121;
+}
+
+header,
+header a {
+  color: white;
+  text-decoration: none;
+}
+
 section {
   padding: 30px;
 }
@@ -408,6 +421,49 @@ section {
 
 .rounded {
   border-radius: 100%;
+}
+
+.last-right {
+  margin-right: 0;
+}
+
+.last-left {
+  margin-left: 0;
+}
+
+.last-bottom {
+  margin-bottom: 0;
+}
+
+.nav-phone__toggle,
+.logo {
+  position: absolute;
+  top: 5px;
+  font-size: 26px;
+}
+
+.nav-phone__toggle {
+  left: 15px;
+}
+
+.logo {
+  left: 70px;
+}
+
+.nav-default {
+  float: right;
+}
+
+.nav-default__item {
+  margin-right: 15px;
+  padding: 10px 0 6px;
+  display: inline-block;
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+  border-bottom-color: #212121;
+}
+.nav-default__item.selected {
+  border-bottom-color: white;
 }
 
 .events {

@@ -1,20 +1,68 @@
 @import "variables";
 
+// structure
+
+header {
+    padding: 0 15px;
+    height: $header-height;
+    background: $cl-header-bkg;
+}
+header,
+header a {
+    color: white;
+    text-decoration: none;
+}
 section {
     padding: 30px;
     @media (max-width: 767px) { padding: 4%; }
     @media (max-width: 480px) { padding: 3%; }
 }
-
 .heading-two {
     margin-bottom: 10px;
     font-size: 24px;
     @media (max-width: 767px) { font-size: 20px; }
 }
-
 .rounded {
     border-radius: 100%;
 }
+.last-right {
+    margin-right: 0;
+}
+.last-left {
+    margin-left: 0;
+}
+.last-bottom {
+    margin-bottom: 0;
+}
+
+// navigation
+
+.nav-phone__toggle,
+.logo {
+    position: absolute;
+    top: 5px;
+    font-size: 26px;
+}
+.nav-phone__toggle {
+    left: 15px;
+}
+.logo {
+    left: 70px;
+}
+.nav-default {
+    float: right;
+}
+.nav-default__item {
+    margin-right: 15px;
+    padding: 10px 0 6px;
+    display: inline-block;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+    border-bottom-color: $cl-header-bkg;
+    &.selected { border-bottom-color: white; }
+}
+
+// events
 
 .events {
     margin: 0 -5px;
