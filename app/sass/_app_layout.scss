@@ -3,9 +3,11 @@
 // structure
 
 header {
-    padding: 0 15px;
+    position: fixed;
+    width: 100%;
     height: $header-height;
     background: $cl-header-bkg;
+    z-index: 2;
 }
 header,
 header a {
@@ -17,6 +19,12 @@ section {
     @media (max-width: 767px) { padding: 4%; }
     @media (max-width: 480px) { padding: 3%; }
 }
+main,
+footer {
+    // compensate for the header's position fixed with the two properties below
+    position: relative;
+    top: $header-height;
+}
 .heading-two {
     margin-bottom: 10px;
     font-size: 24px;
@@ -25,21 +33,23 @@ section {
 .rounded {
     border-radius: 100%;
 }
+.pos-absolute {
+    position: absolute;
+}
 .last-right {
-    margin-right: 0;
+    margin-right: 0 !important;
 }
 .last-left {
-    margin-left: 0;
+    margin-left: 0 !important;
 }
 .last-bottom {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
 }
 
 // navigation
 
 .nav-phone__toggle,
 .logo {
-    position: absolute;
     top: 5px;
     font-size: 26px;
 }
@@ -50,7 +60,7 @@ section {
     left: 70px;
 }
 .nav-default {
-    float: right;
+    right: 15px;
 }
 .nav-default__item {
     margin-right: 15px;
