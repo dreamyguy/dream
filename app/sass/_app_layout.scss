@@ -78,6 +78,7 @@ footer {
 }
 .nav-phone__toggle {
     left: 15px;
+    line-height: 28px;
 }
 .logo {
     left: 70px;
@@ -120,6 +121,7 @@ footer {
     @media (max-width: 1050px) { width: 23.6%; }
     @media (max-width: 980px) { width: 23.4%; }
     @media (max-width: 864px) { width: 23.2%; }
+    @media (max-width: 776px) { width: 23%; }
     @media (max-width: 767px) { width: 31.4%; }
     @media (max-width: 704px) { width: 31.2%; }
     @media (max-width: 636px) { width: 31%; }

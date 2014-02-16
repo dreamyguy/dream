@@ -499,6 +499,7 @@ footer {
 
 .nav-phone__toggle {
   left: 15px;
+  line-height: 28px;
 }
 
 .logo {
@@ -562,6 +563,11 @@ footer {
 @media (max-width: 864px) {
   .events__item {
     width: 23.2%;
+  }
+}
+@media (max-width: 776px) {
+  .events__item {
+    width: 23%;
   }
 }
 @media (max-width: 767px) {
