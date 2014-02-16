@@ -411,12 +411,6 @@ section {
   }
 }
 
-main,
-footer {
-  position: relative;
-  top: 40px;
-}
-
 .heading-two {
   margin-bottom: 15px;
   font-size: 28px;
@@ -603,6 +597,11 @@ footer {
 
 .events__item--supporter {
   width: 100%;
+}
+
+.header-gap {
+  display: block;
+  height: 40px;
 }
 
 /* --------------------------------------------

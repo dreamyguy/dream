@@ -19,12 +19,6 @@ section {
     @media (max-width: 767px) { padding: 4%; }
     @media (max-width: 480px) { padding: 3%; }
 }
-main,
-footer {
-    // compensate for the header's position fixed with the two properties below
-    position: relative;
-    top: $header-height;
-}
 .heading-two {
     margin-bottom: 15px;
     font-size: 28px;
@@ -138,3 +132,10 @@ footer {
 .events__item--name {}
 .events__item--date {}
 .events__item--description {}
+
+// miscelaneous
+
+.header-gap {
+    display: block;
+    height: $header-height;
+}
