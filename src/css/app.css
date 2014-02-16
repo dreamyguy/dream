@@ -418,52 +418,52 @@ footer {
 }
 
 .heading-two {
-  margin-bottom: 10px;
-  font-size: 24px;
+  margin-bottom: 15px;
+  font-size: 28px;
 }
 @media (max-width: 767px) {
   .heading-two {
-    font-size: 20px;
+    font-size: 24px;
   }
 }
 
 .heading-three {
-  margin-bottom: 8px;
-  font-size: 20px;
+  margin-bottom: 10px;
+  font-size: 24px;
 }
 @media (max-width: 767px) {
   .heading-three {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
 .heading-four {
   margin-bottom: 8px;
-  font-size: 18px;
+  font-size: 20px;
 }
 @media (max-width: 767px) {
   .heading-four {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
 .heading-five {
-  margin-bottom: 6px;
-  font-size: 16px;
+  margin-bottom: 8px;
+  font-size: 18px;
 }
 @media (max-width: 767px) {
   .heading-five {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
 .heading-six {
   margin-bottom: 6px;
-  font-size: 14px;
+  font-size: 16px;
 }
 @media (max-width: 767px) {
   .heading-six {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 

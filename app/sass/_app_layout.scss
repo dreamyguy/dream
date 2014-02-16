@@ -26,29 +26,29 @@ footer {
     top: $header-height;
 }
 .heading-two {
+    margin-bottom: 15px;
+    font-size: 28px;
+    @media (max-width: 767px) { font-size: 24px; }
+}
+.heading-three {
     margin-bottom: 10px;
     font-size: 24px;
     @media (max-width: 767px) { font-size: 20px; }
 }
-.heading-three {
+.heading-four {
     margin-bottom: 8px;
     font-size: 20px;
     @media (max-width: 767px) { font-size: 18px; }
 }
-.heading-four {
+.heading-five {
     margin-bottom: 8px;
     font-size: 18px;
     @media (max-width: 767px) { font-size: 16px; }
 }
-.heading-five {
+.heading-six {
     margin-bottom: 6px;
     font-size: 16px;
     @media (max-width: 767px) { font-size: 14px; }
-}
-.heading-six {
-    margin-bottom: 6px;
-    font-size: 14px;
-    @media (max-width: 767px) { font-size: 12px; }
 }
 .rounded {
     border-radius: 100%;
