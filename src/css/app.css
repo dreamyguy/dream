@@ -523,9 +523,14 @@ footer {
 
 .events__item {
   width: 160px;
-  margin: 0 5px;
+  margin: 0 5px 15px;
   text-align: center;
   display: inline-block;
+}
+
+.events__item--name,
+.events__item--date {
+  margin-bottom: 4px;
 }
 
 .events__item--supporter {
