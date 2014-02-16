@@ -30,6 +30,26 @@ footer {
     font-size: 24px;
     @media (max-width: 767px) { font-size: 20px; }
 }
+.heading-three {
+    margin-bottom: 8px;
+    font-size: 20px;
+    @media (max-width: 767px) { font-size: 18px; }
+}
+.heading-four {
+    margin-bottom: 8px;
+    font-size: 18px;
+    @media (max-width: 767px) { font-size: 16px; }
+}
+.heading-five {
+    margin-bottom: 6px;
+    font-size: 16px;
+    @media (max-width: 767px) { font-size: 14px; }
+}
+.heading-six {
+    margin-bottom: 6px;
+    font-size: 14px;
+    @media (max-width: 767px) { font-size: 12px; }
+}
 .rounded {
     border-radius: 100%;
 }
