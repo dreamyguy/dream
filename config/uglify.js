@@ -11,6 +11,7 @@ var files = {
     bottom: {
         'src/js/js_bottom.js': [
             'app/js/app.js',
+            'app/js/app_nav-phone-toggle.js',
             'app/js/webfont-loader.js'
         ]
     }

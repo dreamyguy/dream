@@ -1,0 +1,96 @@
+@import "compass";
+@import "variables";
+
+$cl-gray-090: #515151;
+$cl-gray-180: #888888;
+$cl-gray-030: #242424;
+$cl-gray-040: #313131;
+$cl-gray-050: #333333;
+$cl-gray-410: #fefefe;
+
+$clv-nav-phone-item-bkg: $cl-gray-090;
+$clv-nav-phone-item-bkg-current: $cl-black;
+$clv-nav-phone-item-border-top: $cl-gray-180;
+$clv-nav-phone-item-border-bottom: $cl-gray-040;
+$clv-nav-phone-item-color: $cl-gray-410;
+$nav-phone-width: 170px;
+
+#overlay-nav-menu-close {
+    background: none;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+.page {
+    width: 100%;
+    height: 100%;
+}
+.nav-phone__toggle {
+    top: 5px;
+    left: 15px;
+    font-size: 26px;
+    line-height: 28px;
+    &:hover,
+    &:active,
+    &:visited {
+        color: $cl-white !important;
+    }
+}
+.nav-phone {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: $nav-phone-width;
+    background-color: $clv-nav-phone-item-bkg;
+    box-shadow: inset 0 0 10px $cl-gray-030;
+    display: none;
+    overflow-y: auto;
+}
+.nav-phone__item {
+    border-top: 1px solid $clv-nav-phone-item-border-top;
+    border-bottom: 1px solid $clv-nav-phone-item-border-bottom;
+    text-shadow: 0 1px 1px $cl-gray-050;
+    &.first,
+    &.current {
+        border-top: none;
+    }
+    &.current {
+        background-color: $clv-nav-phone-item-bkg-current;
+    }
+    a {
+        display: block;
+        padding: 12px 10px 12px 20px;
+        text-decoration: none;
+        color: $clv-nav-phone-item-color;
+    }
+}
+.nav-phone-is-collapsed {
+    body {
+        overflow-x: auto;
+    }
+    .nav-phone {
+        display: none;
+    }
+    .page {
+        @include transition( 0.2s , transform , ease );
+        @include build-prefix( transform , 'translateX(0)' );
+    }
+}
+.nav-phone-is-expanded {
+    overflow: hidden !important;
+    body {
+        overflow: hidden !important;
+    }
+    .nav-phone {
+        display: block;
+    }
+    .page {
+        overflow-x: hidden !important;
+        @include build-prefix( transform , 'translateX( #{$nav-phone-width} )' );
+    }
+}
