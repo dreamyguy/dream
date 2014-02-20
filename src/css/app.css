@@ -384,7 +384,6 @@ abbr, acronym {
 }
 
 header {
-  position: fixed;
   width: 100%;
   height: 40px;
   background: #212121;
@@ -598,11 +597,6 @@ section {
 
 .events__item--supporter {
   width: 100%;
-}
-
-.header-gap {
-  display: block;
-  height: 40px;
 }
 
 /* --------------------------------------------

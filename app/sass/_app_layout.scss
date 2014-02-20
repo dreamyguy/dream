@@ -3,7 +3,6 @@
 // structure
 
 header {
-    position: fixed;
     width: 100%;
     height: $header-height;
     background: $cl-header-bkg;
@@ -135,8 +134,3 @@ section {
 .events__item--description {}
 
 // miscelaneous
-
-.header-gap {
-    display: block;
-    height: $header-height;
-}
