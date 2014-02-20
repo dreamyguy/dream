@@ -502,7 +502,7 @@ section {
   border-bottom-style: solid;
   border-bottom-color: #212121;
 }
-.nav-default__item.selected {
+.nav-default__item.current {
   border-bottom-color: white;
 }
 

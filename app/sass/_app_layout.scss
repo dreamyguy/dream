@@ -79,7 +79,7 @@ section {
     border-bottom-width: 5px;
     border-bottom-style: solid;
     border-bottom-color: $cl-header-bkg;
-    &.selected { border-bottom-color: white; }
+    &.current { border-bottom-color: white; }
 }
 
 // lists
