@@ -105,7 +105,7 @@ footer {
     border-bottom-width: 5px;
     border-bottom-style: solid;
     border-bottom-color: $clv-header-bkg;
-    &.current { border-bottom-color: white; }
+    &.current { border-bottom-color: $cl-fav-beige-light; }
 }
 
 // lists

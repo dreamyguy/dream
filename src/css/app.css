@@ -662,7 +662,7 @@ footer {
   border-bottom-color: #352f2b;
 }
 .nav-default__item.current {
-  border-bottom-color: white;
+  border-bottom-color: #f2f2ea;
 }
 
 .list-bullet {
