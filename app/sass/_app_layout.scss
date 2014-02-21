@@ -151,4 +151,20 @@ footer {
 .events__item--date {}
 .events__item--description {}
 
+// color bar
+
+.color-bar,
+.color-bar__item {
+    font-size: 0;
+}
+.color-bar {
+    margin: 0;
+    padding: 0;
+}
+.color-bar__item {
+    display: inline-block;
+    height: 5px;
+    width: 10%
+}
+
 // miscelaneous
