@@ -484,6 +484,14 @@ section {
   margin-bottom: 15px;
 }
 
+.text-shadow-dark {
+  text-shadow: 0 1px 1px #111111;
+}
+
+.text-shadow-light {
+  text-shadow: 0 1px 1px white;
+}
+
 .logo {
   top: 2px;
   left: 70px;
