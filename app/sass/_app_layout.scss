@@ -5,12 +5,12 @@
 header {
     width: 100%;
     height: $header-height;
-    background: $cl-header-bkg;
+    background: $clv-header-bkg;
     z-index: 2;
 }
 header,
 header a {
-    color: white;
+    color: $cl-fav-beige-light;
     text-decoration: none;
 }
 section,
@@ -24,6 +24,10 @@ footer {
     max-width: $max-width-content;
     margin: 0 auto;
     position: relative;
+}
+.heading-two,
+.heading-three {
+    color: $cl-fav-occre-dark;
 }
 .heading-two {
     margin-bottom: 15px;
@@ -95,7 +99,7 @@ footer {
     display: inline-block;
     border-bottom-width: 5px;
     border-bottom-style: solid;
-    border-bottom-color: $cl-header-bkg;
+    border-bottom-color: $clv-header-bkg;
     &.current { border-bottom-color: white; }
 }
 
