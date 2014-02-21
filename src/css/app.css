@@ -629,6 +629,14 @@ footer {
   text-shadow: 0 1px 1px white;
 }
 
+.gradient-topleft-beige {
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #f2f2ea), color-stop(100%, #e8e6da));
+  background-image: -webkit-linear-gradient(left top, #f2f2ea, #e8e6da);
+  background-image: -moz-linear-gradient(left top, #f2f2ea, #e8e6da);
+  background-image: -o-linear-gradient(left top, #f2f2ea, #e8e6da);
+  background-image: linear-gradient(left top, #f2f2ea, #e8e6da);
+}
+
 .logo {
   position: absolute;
   top: 2px;
