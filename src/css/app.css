@@ -396,16 +396,22 @@ header a {
   text-decoration: none;
 }
 
-section {
+section,
+aside,
+footer {
   padding: 30px;
 }
 @media (max-width: 767px) {
-  section {
+  section,
+  aside,
+  footer {
     padding: 4%;
   }
 }
 @media (max-width: 480px) {
-  section {
+  section,
+  aside,
+  footer {
     padding: 3%;
   }
 }
