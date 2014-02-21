@@ -16,12 +16,12 @@ header a {
 section,
 aside,
 footer {
-    padding: 30px;
-    @media (max-width: 767px) { padding: 4%; }
-    @media (max-width: 480px) { padding: 3%; }
+    padding: $padding-default;
+    @media (max-width: 767px) { padding: $padding-767px; }
+    @media (max-width: 480px) { padding: $padding-480px; }
 }
 .content {
-    max-width: 1234px; // fun fun!
+    max-width: $max-width-content;
     margin: 0 auto;
     position: relative;
 }
@@ -78,9 +78,13 @@ footer {
 // navigation
 
 .logo {
+    position: absolute;
     top: 2px;
-    left: 70px;
+    left: $padding-default;
     font-size: 26px;
+    @media (max-width: 767px) {
+        left: 70px;
+    }
 }
 .nav-default {
     right: 15px;
