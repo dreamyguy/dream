@@ -18,6 +18,11 @@ section {
     @media (max-width: 767px) { padding: 4%; }
     @media (max-width: 480px) { padding: 3%; }
 }
+.content {
+    max-width: 1234px; // fun fun!
+    margin: 0 auto;
+    position: relative;
+}
 .heading-two {
     margin-bottom: 15px;
     font-size: 28px;

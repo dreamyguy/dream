@@ -410,6 +410,12 @@ section {
   }
 }
 
+.content {
+  max-width: 1234px;
+  margin: 0 auto;
+  position: relative;
+}
+
 .heading-two {
   margin-bottom: 15px;
   font-size: 28px;
