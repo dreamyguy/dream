@@ -2,7 +2,12 @@
 @import "variables";
 
 // structure
-
+a,
+a:hover,
+a:active,
+a:visited {
+    text-decoration: none;
+}
 header {
     width: 100%;
     height: $header-height;
@@ -76,6 +81,15 @@ footer {
 .uppercase {
     text-transform: uppercase;
 }
+.align-left {
+    text-align: left;
+}
+.align-center {
+    text-align: center;
+}
+.align-right {
+    text-align: right;
+}
 .text-shadow-dark {
     text-shadow: 0 1px 1px $cl-black;
 }
@@ -120,6 +134,30 @@ footer {
         font-size: 16px;
         margin-right: 15px;
     }
+}
+
+.list-share {
+    margin: -2%;
+    i {
+        position: relative;
+        top: 15px;
+        font-size: 40px;
+        text-shadow: none;
+    }
+}
+.list-share__wrapper {
+    height: 70px;
+    text-align: center;
+}
+.list-share__item {
+    display: inline-block;
+    margin: 0 2%;
+}
+.list-share__item__link {
+    display: block;
+    width: 70px;
+    height: 70px;
+    text-align: center;
 }
 
 // events
