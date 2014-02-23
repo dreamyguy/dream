@@ -828,6 +828,10 @@ footer {
   width: 100%;
 }
 
+.section__event-map {
+  min-height: 400px;
+}
+
 .color-bar,
 .color-bar__item {
   font-size: 0;
