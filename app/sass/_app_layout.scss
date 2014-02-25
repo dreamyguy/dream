@@ -99,6 +99,22 @@ footer {
 .gradient-topleft-beige {
     @include background-image(linear-gradient(left top, $cl-fav-beige-light, $cl-fav-beige-dark));
 }
+.column-left,
+.column-right {
+    float: left;
+    width: 48%;
+    @media (max-width: 767px) {
+        float: none;
+        width: auto;
+    }
+}
+.column-left {
+    margin-right: 4%;
+    @media (max-width: 767px) {
+        margin-right: auto;
+        margin-bottom: 15px;
+    }
+}
 
 
 // navigation
@@ -128,7 +144,8 @@ footer {
 // lists
 
 .list-bullet {
-    margin: 0 0 15px 30px;
+    margin: 0;
+    padding: 15px;
     line-height: 25px;
     i {
         font-size: 16px;

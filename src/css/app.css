@@ -660,6 +660,29 @@ footer {
   background-image: linear-gradient(left top, #f2f2ea, #e8e6da);
 }
 
+.column-left,
+.column-right {
+  float: left;
+  width: 48%;
+}
+@media (max-width: 767px) {
+  .column-left,
+  .column-right {
+    float: none;
+    width: auto;
+  }
+}
+
+.column-left {
+  margin-right: 4%;
+}
+@media (max-width: 767px) {
+  .column-left {
+    margin-right: auto;
+    margin-bottom: 15px;
+  }
+}
+
 .logo {
   position: absolute;
   top: 2px;
@@ -689,7 +712,8 @@ footer {
 }
 
 .list-bullet {
-  margin: 0 0 15px 30px;
+  margin: 0;
+  padding: 15px;
   line-height: 25px;
 }
 .list-bullet i {
