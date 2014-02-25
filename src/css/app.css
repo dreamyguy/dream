@@ -646,34 +646,75 @@ footer {
   text-shadow: 0 1px 1px white;
 }
 
-.gradient-topleft-beige {
-  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #f2f2ea), color-stop(100%, #e8e6da));
-  background-image: -webkit-linear-gradient(left top, #f2f2ea, #e8e6da);
-  background-image: -moz-linear-gradient(left top, #f2f2ea, #e8e6da);
-  background-image: -o-linear-gradient(left top, #f2f2ea, #e8e6da);
-  background-image: linear-gradient(left top, #f2f2ea, #e8e6da);
+.width-full {
+  width: 100%;
+}
+
+.f-size-big {
+  font-size: 22px;
+  line-height: 34px;
+}
+@media (max-width: 1148px) {
+  .f-size-big {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 979px) {
+  .f-size-big {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.column-left,
+.column-right,
+.column-left-alt,
+.column-right-alt {
+  float: left;
+}
+@media (max-width: 767px) {
+  .column-left,
+  .column-right,
+  .column-left-alt,
+  .column-right-alt {
+    float: none;
+    width: auto !important;
+  }
 }
 
 .column-left,
 .column-right {
-  float: left;
   width: 48%;
 }
-@media (max-width: 767px) {
-  .column-left,
-  .column-right {
-    float: none;
-    width: auto;
-  }
-}
 
-.column-left {
+.column-left,
+.column-left-alt {
   margin-right: 4%;
 }
 @media (max-width: 767px) {
-  .column-left {
+  .column-left,
+  .column-left-alt {
     margin-right: auto;
     margin-bottom: 15px;
+  }
+}
+
+.column-left-alt {
+  width: 58%;
+}
+@media (max-width: 979px) {
+  .column-left-alt {
+    width: 48%;
+  }
+}
+
+.column-right-alt {
+  width: 38%;
+}
+@media (max-width: 979px) {
+  .column-right-alt {
+    width: 48%;
   }
 }
 
@@ -868,6 +909,14 @@ footer {
   display: inline-block;
   height: 5px;
   width: 10%;
+}
+
+.gradient-topleft-beige {
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #f2f2ea), color-stop(100%, #e8e6da));
+  background-image: -webkit-linear-gradient(left top, #f2f2ea, #e8e6da);
+  background-image: -moz-linear-gradient(left top, #f2f2ea, #e8e6da);
+  background-image: -o-linear-gradient(left top, #f2f2ea, #e8e6da);
+  background-image: linear-gradient(left top, #f2f2ea, #e8e6da);
 }
 
 #overlay-nav-menu-close {
