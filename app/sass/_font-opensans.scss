@@ -86,8 +86,8 @@
 .wf-active .open-sans-light {
   font-family: 'OpenSansLight', $font-fallback;
 }
-.open-sans-lightitalic,
-.wf-active .open-sans-lightitalic {
+.open-sans-light-italic,
+.wf-active .open-sans-light-italic {
   font-family: 'OpenSansLightItalic', $font-fallback;
 }
 .open-sans-regular,
@@ -125,7 +125,7 @@
 
 .wf-loading {
   .open-sans-light,
-  .open-sans-lightitalic,
+  .open-sans-light-italic,
   .open-sans-regular,
   .open-sans-italic,
   .open-sans-semibold,
@@ -140,7 +140,7 @@
 
 .wf-inactive {
   .open-sans-light,
-  .open-sans-lightitalic,
+  .open-sans-light-italic,
   .open-sans-regular,
   .open-sans-italic,
   .open-sans-semibold,

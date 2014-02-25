@@ -83,8 +83,8 @@
   font-family: "OpenSansLight", arial, sans-serif;
 }
 
-.open-sans-lightitalic,
-.wf-active .open-sans-lightitalic {
+.open-sans-light-italic,
+.wf-active .open-sans-light-italic {
   font-family: "OpenSansLightItalic", arial, sans-serif;
 }
 
@@ -129,7 +129,7 @@
 }
 
 .wf-loading .open-sans-light,
-.wf-loading .open-sans-lightitalic,
+.wf-loading .open-sans-light-italic,
 .wf-loading .open-sans-regular,
 .wf-loading .open-sans-italic,
 .wf-loading .open-sans-semibold,
@@ -142,7 +142,7 @@
 }
 
 .wf-inactive .open-sans-light,
-.wf-inactive .open-sans-lightitalic,
+.wf-inactive .open-sans-light-italic,
 .wf-inactive .open-sans-regular,
 .wf-inactive .open-sans-italic,
 .wf-inactive .open-sans-semibold,
