@@ -114,6 +114,28 @@ var datasrcArrayImpactAllSortedByDate = arrayByKey(datasrcSortedByDateAll, 'impa
 var datasrcImpactTotalAllSortedByDate = totalSum(datasrcArrayImpactAllSortedByDate);
 var datasrcArrayImpactSumAllSortedByDate = sumArray(datasrcArrayImpactAllSortedByDate);
 
+// Create array based on key value
+// ------------------------------------------------------------
+var arrayAllRepos = function(data) {
+    var arr = [];
+    for (var i in data) {
+        arr.push(data[i]);
+    }
+    return arr;
+};
+var arrayAllReposLength = function(data) {
+    var arr = [];
+    for (var i in data) {
+        arr.push(data[i].length);
+    }
+    return arr;
+};
+var arrayAllReposVar = arrayAllRepos(Object.keys(objRepositoryAll));
+console.log(arrayAllReposVar);
+var arrayAllReposValueArrayLength = arrayAllReposLength(Object.keys(objRepositoryAll));
+console.log(arrayAllReposValueArrayLength);
+
+
 new Chartist.Line('.ct-chart-impact', {
     labels: datasrcArrayCommitNr,
     series: [
@@ -186,4 +208,18 @@ new Chartist.Line('.ct-chart-impact-cumulative-all', {
         showLabel: false,
         showGrid: false
     }
+});
+
+new Chartist.Pie('.ct-chart-all-repos-commits-compare', {
+  labels: arrayAllReposVar,
+  series: arrayAllReposValueArrayLength
+}, {
+  donut: true,
+  donutWidth: 140,
+  width: 800,
+  height: 600,
+  chartPadding: 10,
+  labelOffset: 5,
+  labelDirection: 'explode',
+  showLabel: true
 });
