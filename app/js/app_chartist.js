@@ -16,7 +16,7 @@ $.ajax({
             }
             return arr;
         };
-      //var week_monday = groupBy(datasrc, 'date_day_week', 'Mon');
+        var week_monday = groupBy(datasrc, 'date_day_week', 'Mon');
       //console.log(week_monday);
 
         // Create object array sorted by date
@@ -30,7 +30,7 @@ $.ajax({
             }
             return arr;
         };
-      //var datasrcSortedByDate = groupByDate(datasrc, 'author_date_unix_timestamp');
+        var datasrcSortedByDate = groupByDate(datasrc, 'author_date_unix_timestamp');
       //console.log(datasrcSortedByDate);
 
         // Create array based on key value
@@ -90,14 +90,14 @@ $.ajax({
             }
             return groups;
         };
-      //var objDateDayWeek = groupByAuto(datasrc, 'date_day_week');
+        var objDateDayWeek = groupByAuto(datasrc, 'date_day_week');
       //console.log(objDateDayWeek);
+        var objRepository = groupByAuto(datasrc, 'repository');
+      //console.log(objRepository);
 
         new Chartist.Line('.ct-chart-impact', {
-          //labels: [1, 2, 3, 4, 5, 6, 7, 8],
             labels: datasrcArrayCommitNr,
             series: [
-              //[5, 9, 7, 8, 5, 3, 5, 4]
               datasrcArrayImpact
             ]
         }, {
