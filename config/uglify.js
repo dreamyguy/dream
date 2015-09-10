@@ -14,7 +14,7 @@ var files = {
             'app/js/app.js',
             'app/js/app_nav-phone-toggle.js',
             'app/js/app_nav-current.js',
-            'app/js/app_chartist.js'//,
+            'app/js/app_chartist_local.js'
           //'app/js/webfont-loader.js'
         ]
     }
