@@ -13,8 +13,10 @@ var groupBy = function(data, key, val) {
     }
     return arr;
 };
-var week_monday = groupBy(datasrc, 'date_day_week', 'Mon');
-//console.log(week_monday);
+var weekMonday = groupBy(datasrc, 'date_day_week', 'Mon');
+//console.log(weekMonday);
+var weekMondayAll = groupBy(datasrcAll, 'date_day_week', 'Mon');
+//console.log(weekMondayAll);
 
 // Create object array sorted by date
 // ------------------------------------------------------------
@@ -29,6 +31,8 @@ var groupByDate = function(data, dateField) {
 };
 var datasrcSortedByDate = groupByDate(datasrc, 'author_date_unix_timestamp');
 //console.log(datasrcSortedByDate);
+var datasrcSortedByDateAll = groupByDate(datasrcAll, 'author_date_unix_timestamp');
+//console.log(datasrcSortedByDateAll);
 
 // Create array based on key value
 // ------------------------------------------------------------
@@ -46,6 +50,10 @@ var datasrcArrayCommitNr = arrayByKey(datasrc, 'commit_nr');
 //console.log(datasrcArrayCommitNr);
 var datasrcArrayImpact = arrayByKey(datasrc, 'impact');
 //console.log(datasrcArrayImpact);
+var datasrcArrayCommitNrAll = arrayByKey(datasrcAll, 'commit_nr');
+//console.log(datasrcArrayCommitNrAll);
+var datasrcArrayImpactAll = arrayByKey(datasrcAll, 'impact');
+//console.log(datasrcArrayImpactAll);
 
 // Create array based on key values added to themselves
 // ------------------------------------------------------------
@@ -59,6 +67,8 @@ var totalSum = function(data) {
 };
 var datasrcImpactTotal = totalSum(datasrcArrayImpact);
 //console.log(datasrcImpactTotal);
+var datasrcImpactTotalAll = totalSum(datasrcArrayImpactAll);
+//console.log(datasrcImpactTotalAll);
 
 // Create array based on key values added to themselves
 // ------------------------------------------------------------
@@ -74,6 +84,8 @@ var sumArray = function(data) {
 };
 var datasrcArrayImpactSum = sumArray(datasrcArrayImpact);
 //console.log(datasrcArrayImpactSum);
+var datasrcArrayImpactSumAll = sumArray(datasrcArrayImpactAll);
+//console.log(datasrcArrayImpactSumAll);
 
 // Create object array based on key
 // ------------------------------------------------------------
@@ -89,8 +101,17 @@ var groupByAuto = function(data, key) {
 };
 var objDateDayWeek = groupByAuto(datasrc, 'date_day_week');
 //console.log(objDateDayWeek);
-var objRepository = groupByAuto(datasrc, 'repository');
-console.log(objRepository);
+var objDateDayWeekAll = groupByAuto(datasrcAll, 'date_day_week');
+//console.log(objDateDayWeekAll);
+var objRepositoryAll = groupByAuto(datasrcAll, 'repository');
+console.log(objRepositoryAll);
+
+
+// Get commits from all repos listed chronologically in one object
+// ------------------------------------------------------------
+var datasrcArrayImpactAllSortedByDate = arrayByKey(datasrcSortedByDateAll, 'impact');
+var datasrcImpactTotalAllSortedByDate = totalSum(datasrcArrayImpactAllSortedByDate);
+var datasrcArrayImpactSumAllSortedByDate = sumArray(datasrcArrayImpactAllSortedByDate);
 
 new Chartist.Line('.ct-chart-impact', {
     labels: datasrcArrayCommitNr,
