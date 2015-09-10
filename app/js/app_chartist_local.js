@@ -150,3 +150,39 @@ new Chartist.Line('.ct-chart-impact-cumulative', {
     }
 });
 
+new Chartist.Line('.ct-chart-impact-all', {
+    labels: datasrcArrayCommitNrAll,
+    series: [
+      datasrcArrayImpactAllSortedByDate
+    ]
+}, {
+    height: '800px',
+    high: 30000,
+    low: -30000,
+    showArea: true,
+    showLine: true,
+    showPoint: false,
+    fullWidth: true,
+    axisX: {
+        showLabel: false,
+        showGrid: false
+    }
+});
+
+new Chartist.Line('.ct-chart-impact-cumulative-all', {
+    labels: datasrcArrayCommitNrAll,
+    series: [
+      datasrcArrayImpactSumAllSortedByDate
+    ]
+}, {
+    height: '1200px',
+    high: 3000000,
+    showArea: true,
+    showLine: true,
+    showPoint: false,
+    fullWidth: true,
+    axisX: {
+        showLabel: false,
+        showGrid: false
+    }
+});
