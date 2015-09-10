@@ -1,6 +1,7 @@
 
 var datasrc = dataRepoAbcAdloader;
-var datasrcAll = dataReposAll;
+//var datasrcAll = dataReposAll;
+var datasrcAll = dataReposSome;
 
 // Create object array based on key and its value
 // ------------------------------------------------------------
