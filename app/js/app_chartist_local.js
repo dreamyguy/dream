@@ -105,7 +105,7 @@ var objDateDayWeek = groupByAuto(datasrc, 'date_day_week');
 var objDateDayWeekAll = groupByAuto(datasrcAll, 'date_day_week');
 //console.log(objDateDayWeekAll);
 var objRepositoryAll = groupByAuto(datasrcAll, 'repository');
-console.log(objRepositoryAll);
+//console.log(objRepositoryAll);
 
 
 // Get commits from all repos listed chronologically in one object
@@ -179,7 +179,7 @@ new Chartist.Line('.ct-chart-impact-all', {
       datasrcArrayImpactAllSortedByDate
     ]
 }, {
-    height: '800px',
+    height: '300px',
     high: 30000,
     low: -30000,
     showArea: true,
@@ -198,8 +198,8 @@ new Chartist.Line('.ct-chart-impact-cumulative-all', {
       datasrcArrayImpactSumAllSortedByDate
     ]
 }, {
-    height: '1200px',
-    high: 3700000,
+    height: '300px',
+    high: 1400000, // 3700000 with all repos
     showArea: true,
     showLine: true,
     showPoint: false,
