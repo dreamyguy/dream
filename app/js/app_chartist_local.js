@@ -176,7 +176,7 @@ new Chartist.Line('.ct-chart-impact-cumulative-all', {
     ]
 }, {
     height: '1200px',
-    high: 3000000,
+    high: 3700000,
     showArea: true,
     showLine: true,
     showPoint: false,
