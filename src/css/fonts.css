@@ -5,7 +5,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'OpenSansLightItalic';
   src: url("../fonts/OpenSans-LightItalic-webfont.eot");
@@ -13,7 +12,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'OpenSansRegular';
   src: url("../fonts/OpenSans-Regular-webfont.eot");
@@ -21,7 +19,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'OpenSansItalic';
   src: url("../fonts/OpenSans-Italic-webfont.eot");
@@ -29,7 +26,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'OpenSansSemibold';
   src: url("../fonts/OpenSans-Semibold-webfont.eot");
@@ -37,7 +33,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'OpenSansSemiboldItalic';
   src: url("../fonts/OpenSans-SemiboldItalic-webfont.eot");
@@ -45,7 +40,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'OpenSansBold';
   src: url("../fonts/OpenSans-Bold-webfont.eot");
@@ -53,7 +47,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'OpenSansBoldItalic';
   src: url("../fonts/OpenSans-BoldItalic-webfont.eot");
@@ -61,7 +54,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'OpenSansExtrabold';
   src: url("../fonts/OpenSans-ExtraBold-webfont.eot");
@@ -69,7 +61,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'OpenSansExtraboldItalic';
   src: url("../fonts/OpenSans-ExtraBoldItalic-webfont.eot");
@@ -77,7 +68,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 .open-sans-light,
 .wf-active .open-sans-light {
   font-family: "OpenSansLight", arial, sans-serif;
@@ -161,7 +151,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 [class^="icon-"],
 [class*=" icon-"] {
   font-family: FontAwesome;
@@ -238,7 +227,7 @@ a [class*=" icon-"] {
 
 .icon-border {
   border: solid 1px #eeeeee;
-  padding: 0.2em 0.25em 0.15em;
+  padding: .2em .25em .15em;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -450,52 +439,42 @@ a .icon-spin {
   0% {
     -moz-transform: rotate(0deg);
   }
-
   100% {
     -moz-transform: rotate(359deg);
   }
 }
-
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
   }
-
   100% {
     -webkit-transform: rotate(359deg);
   }
 }
-
 @-o-keyframes spin {
   0% {
     -o-transform: rotate(0deg);
   }
-
   100% {
     -o-transform: rotate(359deg);
   }
 }
-
 @-ms-keyframes spin {
   0% {
     -ms-transform: rotate(0deg);
   }
-
   100% {
     -ms-transform: rotate(359deg);
   }
 }
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(359deg);
   }
 }
-
 .icon-rotate-90:before {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);

@@ -24,7 +24,7 @@ module.exports = {
         files: [
             '<%= cfg.dist %>/*.html',
             '<%= cfg.dist %>/{,*/}*.css',
-            '<%= cfg.dist %>/scripts/{,*/}*.js',
+            '<%= cfg.dist %>/{,*/}*.js',
             '<%= cfg.dist %>/images/{,*/}*.{gif,jpeg,jpg,png,svg,webp}'
         ]
     }

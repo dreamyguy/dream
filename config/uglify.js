@@ -5,7 +5,8 @@ var files = {
         'src/js/js_top.js': [
             'app/js/jquery-1.10.2.min.js',
             'app/js/modernizr.custom.49435.js',
-            'app/js/modernizr.ios.js'
+            'app/js/modernizr.ios.js',
+            'app/js/chartist.min.js'
         ]
     },
     bottom: {
@@ -13,8 +14,8 @@ var files = {
             'app/js/app.js',
             'app/js/app_nav-phone-toggle.js',
             'app/js/app_nav-current.js',
-            'app/js/app_events_google-map.js',
-            'app/js/webfont-loader.js'
+            'app/js/app_chartist.js'//,
+          //'app/js/webfont-loader.js'
         ]
     }
 };
