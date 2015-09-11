@@ -3,9 +3,28 @@ var datasrc = dataRepoAbcAdloader;
 //var datasrcAll = dataReposAll;
 var datasrcAll = dataReposSome;
 
+// Sort datasource array by date
+// ------------------------------------------------------------
+datasrc.sort(function(a, b) {
+    return a.author_date_unix_timestamp - b.author_date_unix_timestamp;
+});
+//console.log(datasrc);
+
+datasrcAll.sort(function(a, b) {
+    return a.author_date_unix_timestamp - b.author_date_unix_timestamp;
+});
+//console.log(datasrcAll);
+
+// Round up the date so that we can sort commits from different repost by date
+// ------------------------------------------------------------
+var roundDate = function(timeStamp) {
+    var d = new Date(timeStamp);
+    return new Date(d.getFullYear(), d.getMonth(), d.getDate(), 0, 0, 0, 0)
+};
+
 // Create object array based on key and its value
 // ------------------------------------------------------------
-var groupBy = function(data, key, val) {
+var groupByKeyAndValue = function(data, key, val) {
     var arr = [];
     for (var i in data) {
         if (data[i][key] == val) {
@@ -14,26 +33,8 @@ var groupBy = function(data, key, val) {
     }
     return arr;
 };
-var weekMonday = groupBy(datasrc, 'date_day_week', 'Mon');
-//console.log(weekMonday);
-var weekMondayAll = groupBy(datasrcAll, 'date_day_week', 'Mon');
+var weekMondayAll = groupByKeyAndValue(datasrcAll, 'date_day_week', 'Mon');
 //console.log(weekMondayAll);
-
-// Create object array sorted by date
-// ------------------------------------------------------------
-var groupByDate = function(data, dateField) {
-    var arr = [];
-    for (var i in data) {
-        arr.sort(function(a, b) {
-            return new Date(b.dateField) - new Date(a.dateField);
-        }).push(data[i]);
-    }
-    return arr;
-};
-var datasrcSortedByDate = groupByDate(datasrc, 'author_date_unix_timestamp');
-//console.log(datasrcSortedByDate);
-var datasrcSortedByDateAll = groupByDate(datasrcAll, 'author_date_unix_timestamp');
-//console.log(datasrcSortedByDateAll);
 
 // Create array based on key value
 // ------------------------------------------------------------
@@ -49,12 +50,33 @@ var arrayByKey = function(data, key) {
 };
 var datasrcArrayCommitNr = arrayByKey(datasrc, 'commit_nr');
 //console.log(datasrcArrayCommitNr);
-var datasrcArrayImpact = arrayByKey(datasrc, 'impact');
-//console.log(datasrcArrayImpact);
 var datasrcArrayCommitNrAll = arrayByKey(datasrcAll, 'commit_nr');
 //console.log(datasrcArrayCommitNrAll);
+var datasrcArrayImpact = arrayByKey(datasrc, 'impact');
+//console.log(datasrcArrayImpact);
 var datasrcArrayImpactAll = arrayByKey(datasrcAll, 'impact');
 //console.log(datasrcArrayImpactAll);
+var datasrcArrayTimestamp = arrayByKey(datasrc, 'author_date_unix_timestamp');
+//console.log(datasrcArrayTimestamp);
+var datasrcArrayTimestampAll = arrayByKey(datasrcAll, 'author_date_unix_timestamp');
+//console.log(datasrcArrayTimestampAll);
+
+// Create array based on key value, sorted
+// ------------------------------------------------------------
+var arrayByKeySorted = function(data, key) {
+    var arr = [];
+    for (var i in data) {
+        arr.push(data[i][key]);
+    }
+    arr.sort(function(a, b) {
+        return a - b;
+    });
+    return arr;
+};
+var datasrcArrayByKeySorted = arrayByKeySorted(datasrc, 'author_date_unix_timestamp');
+//console.log(datasrcArrayByKeySorted);
+var datasrcArrayByKeySortedAll = arrayByKeySorted(datasrcAll, 'author_date_unix_timestamp');
+//console.log(datasrcArrayByKeySortedAll);
 
 // Create array based on key values added to themselves
 // ------------------------------------------------------------
@@ -107,13 +129,6 @@ var objDateDayWeekAll = groupByAuto(datasrcAll, 'date_day_week');
 var objRepositoryAll = groupByAuto(datasrcAll, 'repository');
 //console.log(objRepositoryAll);
 
-
-// Get commits from all repos listed chronologically in one object
-// ------------------------------------------------------------
-var datasrcArrayImpactAllSortedByDate = arrayByKey(datasrcSortedByDateAll, 'impact');
-var datasrcImpactTotalAllSortedByDate = totalSum(datasrcArrayImpactAllSortedByDate);
-var datasrcArrayImpactSumAllSortedByDate = sumArray(datasrcArrayImpactAllSortedByDate);
-
 // Create array based on key value
 // ------------------------------------------------------------
 var arrayAllRepos = function(data) {
@@ -131,10 +146,11 @@ var arrayAllReposLength = function(data) {
     return arr;
 };
 var arrayAllReposVar = arrayAllRepos(Object.keys(objRepositoryAll));
-console.log(arrayAllReposVar);
+//console.log(arrayAllReposVar);
 var arrayAllReposValueArrayLength = arrayAllReposLength(Object.keys(objRepositoryAll));
-console.log(arrayAllReposValueArrayLength);
+//console.log(arrayAllReposValueArrayLength);
 
+console.log(datasrcArrayImpactAll);
 
 new Chartist.Line('.ct-chart-impact', {
     labels: datasrcArrayCommitNr,
@@ -176,7 +192,7 @@ new Chartist.Line('.ct-chart-impact-cumulative', {
 new Chartist.Line('.ct-chart-impact-all', {
     labels: datasrcArrayCommitNrAll,
     series: [
-      datasrcArrayImpactAllSortedByDate
+      datasrcArrayImpactAll
     ]
 }, {
     height: '300px',
@@ -195,7 +211,7 @@ new Chartist.Line('.ct-chart-impact-all', {
 new Chartist.Line('.ct-chart-impact-cumulative-all', {
     labels: datasrcArrayCommitNrAll,
     series: [
-      datasrcArrayImpactSumAllSortedByDate
+      datasrcArrayImpactSumAll
     ]
 }, {
     height: '300px',
