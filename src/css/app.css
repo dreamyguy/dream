@@ -1226,7 +1226,7 @@ footer {
 
 .ct-line {
   fill: none;
-  stroke-width: 4px;
+  stroke-width: 0.03rem;
 }
 
 .ct-area {

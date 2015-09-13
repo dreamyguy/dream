@@ -214,7 +214,8 @@
 
 .ct-line {
     fill: none;
-    stroke-width: 4px
+  //stroke-width: 2px
+    stroke-width: 0.03rem
 }
 
 .ct-area {
@@ -838,3 +839,18 @@
     top: 0;
     left: 0
 }
+
+// .ct-label {
+//     // Modern
+//     transform: rotate(-20deg);
+//     // Safari
+//     -webkit-transform: rotate(-20deg);
+//     // Firefox
+//     -moz-transform: rotate(-20deg);
+//     // IE
+//     -ms-transform: rotate(-20deg);
+//     // Opera
+//     -o-transform: rotate(-20deg);
+//     // Internet Explorer
+//   //filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=3);
+// }
