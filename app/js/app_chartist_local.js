@@ -117,7 +117,7 @@ var itemsSum = function(data) {
 var arrayTotal = itemsSum(datasrc);
 //console.log(arrayTotal);
 var arrayTotalAll = itemsSum(datasrcAll);
-console.log(arrayTotalAll);
+//console.log(arrayTotalAll);
 
 // Create array based on key values added to themselves
 // ------------------------------------------------------------
@@ -195,6 +195,16 @@ var arrayAllReposVar = arrayAllRepos(Object.keys(objRepositoryAll));
 //console.log(arrayAllReposVar);
 var arrayAllReposValueArrayLength = arrayAllReposLength(Object.keys(objRepositoryAll));
 //console.log(arrayAllReposValueArrayLength);
+
+// Merge two arrays of identical length
+// ------------------------------------------------------------
+var arraysMerge = function(keys, values) {
+    var obj = {};
+    for (var i = 0; i < keys.length; i++) {
+        obj[keys[i]] = values[i];
+    }
+    return obj;
+};
 
 // Create array with year changes
 // ------------------------------------------------------------
